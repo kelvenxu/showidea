@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     drawShape = BASELINE;
     pen = QPen(Qt::green, 5);
-    cursor = QCursor(QPixmap(":/sunsong/images/green.png"));
+    cursor = QCursor(QPixmap(":/images/pencil.png"));
     setCursor(cursor);
     isDrawLine = false;
     isDrawCurve = false;
@@ -21,6 +21,10 @@ MainWindow::MainWindow(QWidget *parent)
     QPushButton *startBtn = new QPushButton("Hide", this);
 
     connect(startBtn, SIGNAL(clicked()), this, SLOT(switchMode()));
+
+    setWindowIcon(QIcon(":/images/idea48.png"));
+
+    setWindowTitle("ShowIdea");
 
     showFullScreen();
 }
